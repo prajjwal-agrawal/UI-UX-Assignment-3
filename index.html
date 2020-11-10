@@ -6,11 +6,136 @@
   <title>2 Assignment</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/design-system/2.9.4/styles/salesforce-lightning-design-system.min.css ">
   <link rel="stylesheet" href="style.css" />
+  <script src = "script.js"></script>
 </head>
 <body>
-    <div class="slds-box slds-theme_shade slds-p-horizontal_xx-large slds-p-vertical_xx-large outline-box">
-        <div class="slds-m-horizontal_xx-large slds-m-vertical_large">  
-<div class="header not-small-screen">
+    <div class="header slds-p-horizontal_large slds-p-vertical_large ">
+        <div class="slds-grid slds-wrap ">
+            <div class="toggle-btn large-hide slds-m-top_medium slds-small-size_1-of-8 not-large-screen" onclick="toggleSidebar() ">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+        </div>
+            <div class="slds-col  slds-large-size_8-of-12 ">
+                <span class="slds-m-left_medium">ROCK</span>
+            </div>
+            <div class="slds-col  slds-large-size_4-of-12 ">
+                <div class="slds-grid slds-wrap ">
+                    <div class="slds-col  slds-large-size_1-of-4 ">
+                        <span class="not-small-screen">Dashboard</span>
+                    </div>
+                    <div class="slds-col  slds-large-size_1-of-4 ">
+                        <span  >Icon</span>
+                    </div>
+                    <div class="slds-col  slds-large-size_1-of-4 ">
+                        <span  class="not-small-screen">Prajjwal</span>
+                       
+                    </div>
+                    <div class="slds-col  slds-large-size_1-of-4 ">
+                        <span  >Icon</span>
+                    </div>
+                </div>
+            </div>  
+        </div> 
+    </div>
+    <div class="container ">
+    <div  id = "sidebar">
+        <div class="demo-only">
+            <nav class="slds-nav-vertical" aria-label="Sub page">
+            <div class="slds-nav-vertical__section">
+            <h2 id="entity-header" class="slds-nav-vertical__title">Reports</h2>
+            <ul aria-describedby="entity-header">
+            <li class="slds-nav-vertical__item slds-is-active">
+            <a href="javascript:void(0);" class="slds-nav-vertical__action" aria-current="true">Recent</a>
+            </li>
+            <li class="slds-nav-vertical__item">
+            <a href="javascript:void(0);" class="slds-nav-vertical__action">Created by Me</a>
+            </li>
+            <li class="slds-nav-vertical__item">
+            <a href="javascript:void(0);" class="slds-nav-vertical__action">Private Reports</a>
+            </li>
+            <li class="slds-nav-vertical__item">
+            <a href="javascript:void(0);" class="slds-nav-vertical__action">Public Reports</a>
+            </li>
+            <li class="slds-nav-vertical__item">
+            <a href="javascript:void(0);" class="slds-nav-vertical__action">All Reports</a>
+            </li>
+            </ul>
+            </div>
+            <div class="slds-nav-vertical__section">
+            <h2 id="folder-header" class="slds-nav-vertical__title">Folders</h2>
+            <ul aria-describedby="folder-header">
+            <li class="slds-nav-vertical__item">
+            <a href="javascript:void(0);" class="slds-nav-vertical__action">Created by Me</a>
+            </li>
+            <li class="slds-nav-vertical__item">
+            <a href="javascript:void(0);" class="slds-nav-vertical__action">Shared with Me</a>
+            </li>
+            <li class="slds-nav-vertical__item">
+            <a href="javascript:void(0);" class="slds-nav-vertical__action">All Reports</a>
+            </li>
+            </ul>
+            </div>
+            </nav>
+            </div>
+    </div>
+    <div class="slds-box slds-theme_shade slds-p-horizontal_xx-large slds-p-vertical_xx-large outline-box ">
+        <div class="slds-grid slds-wrap slds-p-horizontal_large slds-p-vertical_large slds-theme_shade not-small-screen">
+            <div class="slds-col  slds-large-size_1-of-6 slds-p-left_medium slds-p-vertical_medium ">
+                <h1>Investor List</h1>
+            </div>
+            <div class="slds-col  slds-large-size_2-of-6 slds-p-left_medium slds-p-vertical_medium ">
+                <div class="slds-form-element">
+                    <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_right">
+                      <input type="text" id="text-input-id-1" placeholder="Search by name or email......" class="slds-input" />
+                    </div>
+                </div>
+            </div>
+            <div class="slds-col  slds-large-size_1-of-6 slds-p-left_medium slds-p-vertical_medium ">
+                <div class="slds-form-element">
+                   
+                    <div class="slds-form-element__control">
+                    <div class="slds-combobox_container slds-size_xx-small">
+                    <div class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click" aria-expanded="false" aria-haspopup="listbox" role="combobox">
+                    <div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right" role="none">
+                    <input type="text" class="slds-input slds-combobox__input" id="combobox-id-1" aria-controls="listbox-id-1" autocomplete="off" role="textbox" placeholder="All" readonly="" />
+                    <span class="slds-icon_container slds-icon-utility-down slds-input_icon slds-input_icon_right">
+   
+                    </span>
+                    </div>
+                    
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+            </div>
+            <div class="slds-col  slds-large-size_1-of-6 slds-p-left_medium slds-p-vertical_medium ">
+                <div class="slds-form-element">
+                   
+                    <div class="slds-form-element__control">
+                    <div class="slds-combobox_container slds-size_xx-small">
+                    <div class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click" aria-expanded="false" aria-haspopup="listbox" role="combobox">
+                    <div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right" role="none">
+                    <input type="text" class="slds-input slds-combobox__input" id="combobox-id-1" aria-controls="listbox-id-1" autocomplete="off" role="textbox" placeholder="Both" readonly="" />
+                    <span class="slds-icon_container slds-icon-utility-down slds-input_icon slds-input_icon_right">
+                    </span>
+                    </div>
+                    
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+            </div>
+            <div class="slds-col  slds-large-size_1-of-6 slds-p-left_medium slds-p-vertical_medium ">
+                <span><button class="slds-button slds-button_brand">Card</button></span>
+                <span><button class="slds-button slds-button_brand">List</button></span>
+                
+            </div>
+
+    </div>
+    <div class="slds-m-horizontal_xx-large slds-m-vertical_large">    
+            
+<div class="header not-small-screen slds-p-horizontal_large slds-p-vertical_medium">
     <div class="slds-grid slds-wrap ">
         
         <div class="slds-col slds-large-size_2-of-12 ">
@@ -59,7 +184,7 @@
         <span>$5000,000</span>
     </div>
     <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-1 slds-large-size_1-of-12 not-small-screen">
-     <img src="share_mobile_60.png" height="14px" width="14px"/>
+     <img src="share_mobile_60.png" class="icon-img"  height="14px" width="14px"/>
      <span>
         View
      </span>
@@ -103,7 +228,7 @@
         <span>$5000,000</span>
     </div>
     <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-1 slds-large-size_1-of-12 not-small-screen">
-     <img src="share_mobile_60.png" height="14px" width="14px"/>
+     <img src="share_mobile_60.png" class="icon-img"  height="14px" width="14px"/>
      <span>
         View
      </span>
@@ -147,7 +272,7 @@
         <span>$5000,000</span>
     </div>
     <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-1 slds-large-size_1-of-12 not-small-screen">
-     <img src="share_mobile_60.png" height="14px" width="14px"/>
+     <img src="share_mobile_60.png" class="icon-img" height="14px" width="14px"/>
      <span>
         View
      </span>
@@ -191,7 +316,7 @@
         <span>$5000,000</span>
     </div>
     <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-1 slds-large-size_1-of-12 not-small-screen">
-     <img src="share_mobile_60.png" height="14px" width="14px"/>
+     <img src="share_mobile_60.png" class="icon-img"  height="14px" width="14px"/>
      <span>
         View
      </span>
@@ -235,7 +360,95 @@
         <span>$5000,000</span>
     </div>
     <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-1 slds-large-size_1-of-12 not-small-screen">
-     <img src="share_mobile_60.png" height="14px" width="14px"/>
+     <img src="share_mobile_60.png" class="icon-img"  height="14px" width="14px"/>
+     <span>
+        View
+     </span>
+    </div>
+    <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-1 slds-large-size_1-of-12 not-small-screen">
+        <button class="slds-button slds-p-bottom_small">...</button>
+    </div>
+    
+    </div>
+
+    <footer class="slds-card__footer not-large-screen">
+        <a class="slds-card__footer-action" href="javascript:void(0);">View Details
+          <span class="slds-assistive-text">Accounts</span>
+        </a>
+    </div>
+      </footer>
+    </article>
+    <article class="slds-card">
+        <div class="slds-card__body slds-card__body_inner">
+       
+    <div class="slds-grid slds-wrap ">
+    <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-1 slds-large-size_4-of-12 ">
+     <img src="laptop.jpeg" class = "slds-m-horizontal_medium body-img body-common"/>
+     <br class="not-large-screen"/>
+     <span class= "body-text body-common">Prajjwal Agrawal</span>
+    </div>
+
+    <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-1 slds-large-size_1-of-12 not-large-screen">
+        <span class= "body-email body-common body-email-contribution">prajjwal@gmail.com</span>
+    </div>
+    <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-1 slds-large-size_1-of-12 not-large-screen">
+        <span class= "body-email-contribution body-common body-total-contribution">Total Contributions</span>
+    </div>
+    <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-1 slds-large-size_2-of-12">
+        <span class="body-amount body-common">$5000,000</span>
+    </div>
+    <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-1 slds-large-size_2-of-12 not-small-screen">
+        <span >$5000,000</span>
+    </div>
+    <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-1 slds-large-size_2-of-12 not-small-screen">
+        <span>$5000,000</span>
+    </div>
+    <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-1 slds-large-size_1-of-12 not-small-screen">
+     <img src="share_mobile_60.png" class="icon-img" height="14px" width="14px"/>
+     <span>
+        View
+     </span>
+    </div>
+    <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-1 slds-large-size_1-of-12 not-small-screen">
+        <button class="slds-button slds-p-bottom_small">...</button>
+    </div>
+    
+    </div>
+
+    <footer class="slds-card__footer not-large-screen">
+        <a class="slds-card__footer-action" href="javascript:void(0);">View Details
+          <span class="slds-assistive-text">Accounts</span>
+        </a>
+    </div>
+      </footer>
+    </article>
+    <article class="slds-card">
+        <div class="slds-card__body slds-card__body_inner">
+       
+    <div class="slds-grid slds-wrap ">
+    <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-1 slds-large-size_4-of-12 ">
+     <img src="laptop.jpeg" class = "slds-m-horizontal_medium body-img body-common"/>
+     <br class="not-large-screen"/>
+     <span class= "body-text body-common">Prajjwal Agrawal</span>
+    </div>
+
+    <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-1 slds-large-size_1-of-12 not-large-screen">
+        <span class= "body-email body-common body-email-contribution">prajjwal@gmail.com</span>
+    </div>
+    <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-1 slds-large-size_1-of-12 not-large-screen">
+        <span class= "body-email-contribution body-common body-total-contribution">Total Contributions</span>
+    </div>
+    <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-1 slds-large-size_2-of-12">
+        <span class="body-amount body-common">$5000,000</span>
+    </div>
+    <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-1 slds-large-size_2-of-12 not-small-screen">
+        <span >$5000,000</span>
+    </div>
+    <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-1 slds-large-size_2-of-12 not-small-screen">
+        <span>$5000,000</span>
+    </div>
+    <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-1 slds-large-size_1-of-12 not-small-screen">
+     <img src="share_mobile_60.png" class="icon-img" height="14px" width="14px"/>
      <span>
         View
      </span>
@@ -256,7 +469,7 @@
 
 
 
-
+</div>
 </div>
 </div>
 </div>
